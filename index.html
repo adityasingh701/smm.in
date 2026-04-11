@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: black;
+        overflow-x: hidden;
+    }
+
+    /* Dust Animation Background */
+    .dust {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .dust span {
+        position: absolute;
+        display: block;
+        width: 3px;
+        height: 3px;
+        background: rgba(255,255,255,0.6);
+        animation: moveDust 10s linear infinite;
+        border-radius: 50%;
+    }
+
+    @keyframes moveDust {
+        0% {
+            transform: translateY(100vh) scale(0.5);
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(-10vh) scale(1);
+            opacity: 0;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        max-width: 900px;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 30px;
+        background: linear-gradient(45deg, #ff4d4d, #ff9900);
+        color: white;
+        font-size: 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .image-placeholder {
+        margin-top: 60px;
+        width: 100%;
+        height: 300px;
+        border: 2px dashed white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        opacity: 0.7;
+    }
+
+    .lines {
+        margin-top: 40px;
+    }
+
+    .lines div {
+        height: 2px;
+        background: white;
+        margin: 10px auto;
+        width: 80%;
+        opacity: 0.3;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="dust">
+    <script>
+        for (let i = 0; i < 80; i++) {
+            let span = document.createElement('span');
+            span.style.left = Math.random() * 100 + 'vw';
+            span.style.animationDuration = (5 + Math.random() * 10) + 's';
+            span.style.opacity = Math.random();
+            document.querySelector('.dust').appendChild(span);
+        }
+    </script>
+</div>
+
+<div class="container">
+    <h1>My Portfolio</h1>
+
+    <div class="content">
+        <p>
+            I am a trusted Instagram service provider helping thousands of users grow their social presence effectively and safely. 
+            Over time, I have worked with many individuals, influencers, and businesses who wanted to boost their engagement, reach, and credibility.
+        </p>
+
+        <p>
+            My services are designed to deliver real-looking engagement that helps build strong social proof. 
+            Many clients have already benefited from increased followers, likes, and visibility.
+        </p>
+
+        <p>
+            This service is completely secure, fast, and reliable. 
+            I focus on maintaining quality and consistency so that your profile growth looks natural and trustworthy.
+        </p>
+
+        <p>
+            If you are looking to grow your Instagram professionally and stand out from the crowd, you are at the right place.
+        </p>
+
+        <a href="https://instagram.com/adityasinghchandel007" target="_blank" class="btn">
+            @adityasinghchandel007
+        </a>
+    </div>
+
+    <div class="image-placeholder">
+        Your Image Here
+    </div>
+
+    <div class="lines">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>
+
